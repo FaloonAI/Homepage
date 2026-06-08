@@ -4,199 +4,264 @@
     box-sizing: border-box;
 }
 
+/* Глубокий, чистый темный фон с идеальным контрастом для белого текста */
 body {
-    background: #0a0a0a;
-    color: #00ff41;
-    font-family: 'Courier New', monospace;
+    background: #0a0b10;
+    color: #f8fafc;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
     overflow-x: hidden;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Убираем старый эффект телевизора и заменяем на тонкую, едва заметную сетку */
 .scanline {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        transparent 50%,
-        rgba(0, 255, 65, 0.02) 50%
-    );
-    background-size: 100% 4px;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 20px 20px;
     pointer-events: none;
     z-index: 999;
-    animation: scan 8s linear infinite;
-}
-
-@keyframes scan {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 100%; }
+    opacity: 0.6;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px; /* Немного сузил для лучшей читаемости */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
     position: relative;
     z-index: 1;
 }
 
+/* Строгий, чистый заголовок без глитчей */
 .header {
     text-align: center;
-    margin-bottom: 60px;
-    animation: glitch 3s infinite;
+    margin-bottom: 70px;
 }
 
+/* Мощный монохромный заголовок с аккуратным футуристичным свечением */
 .title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
-    margin-bottom: 10px;
-    letter-spacing: 3px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px; /* Современный плотный трекинг */
+    text-transform: uppercase;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    margin-bottom: 12px;
+}
+
+.output-tree {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #00cc33;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #64748b; /* Приглушенный серый */
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+a.link-item {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
 }
 
 .prompt {
-    color: #666;
-    font-size: 0.9rem;
+    color: #475569;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Премиальный матовый стекломорфизм (Glassmorphism) */
 .terminal-window {
-    background: #0d0d0d;
-    border: 2px solid #00ff41;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+    background: rgba(18, 20, 29, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    margin-bottom: 35px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
     overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Интерактивный отклик при наведении */
+.terminal-window:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .terminal-header {
-    background: #1a1a1a;
-    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 14px 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #00ff41;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .terminal-buttons {
     display: flex;
-    gap: 8px;
+    gap: 7px;
 }
 
+/* Аккуратные плоские точки управления */
 .terminal-button {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: #ff5f56;
+    background: rgba(255, 255, 255, 0.2);
 }
-
-.terminal-button:nth-child(2) {
-    background: #ffbd2e;
-}
-
-.terminal-button:nth-child(3) {
-    background: #27c93f;
-}
+.terminal-button:nth-child(1) { background: rgba(239, 68, 68, 0.4); } /* Приглушенный красный */
+.terminal-button:nth-child(2) { background: rgba(245, 158, 11, 0.4); } /* Приглушенный желтый */
+.terminal-button:nth-child(3) { background: rgba(16, 185, 129, 0.4); } /* Приглушенный зеленый */
 
 .terminal-title {
     margin-left: 15px;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
 }
 
 .terminal-content {
-    padding: 20px;
+    padding: 28px;
     font-size: 0.95rem;
 }
 
 .command-line {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Символ ввода и команда — чистый белый и акцентный серый */
 .prompt-symbol {
-    color: #00ff41;
-    margin-right: 10px;
+    color: #94a3b8;
+    margin-right: 12px;
+    font-weight: bold;
 }
 
 .command {
-    color: #00cc33;
+    color: #ffffff;
+    font-weight: 600;
 }
 
+/* Цвет основного текста вывода */
 .output {
-    color: #aaa;
-    margin-left: 20px;
-    margin-top: 5px;
+    color: #cbd5e1;
+    margin-left: 24px;
+    margin-top: 8px;
 }
 
 .output-line {
-    margin: 3px 0;
+    margin: 6px 0;
 }
 
+/* Подсветка важных элементов (например, drwxr-xr-x или названий папок) */
 .highlight {
-    color: #00ff41;
-    text-shadow: 0 0 5px #00ff41;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
 }
 
+/* Современные плоские карточки-ссылки */
 .link-item {
     display: flex;
     align-items: center;
-    margin: 10px 0;
-    padding: 8px;
-    transition: all 0.3s;
+    margin: 14px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-item:hover {
-    background: rgba(0, 255, 65, 0.1);
-    padding-left: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    padding-left: 22px;
+    cursor: pointer;
 }
 
 .link-icon {
-    margin-right: 10px;
-    color: #00ff41;
+    margin-right: 14px;
+    color: #94a3b8;
+    transition: color 0.2s ease;
+}
+
+.link-item:hover .link-icon {
+    color: #ffffff;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
 }
 
+/* Современный минималистичный курсор */
 .typing-cursor {
-    animation: blink 1s infinite;
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: #ffffff;
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 0.9s step-end infinite;
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    0%, 100% { background: transparent; }
+    50% { background: #ffffff; }
 }
 
 .ascii-art {
-    font-size: 0.7rem;
-    color: #00ff41;
+    font-size: 0.65rem;
+    color: #475569;
     text-align: center;
-    margin: 40px 0;
-    line-height: 1.2;
-    opacity: 0.7;
+    margin: 50px 0;
+    line-height: 1.4;
+    opacity: 0.4;
+    font-family: monospace;
 }
 
 .footer {
     text-align: center;
-    margin-top: 60px;
-    color: #666;
-    font-size: 0.9rem;
+    margin-top: 80px;
+    color: #475569;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
 }
 
+/* Стили для адаптивности под мобильные устройства */
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
     }
     .terminal-content {
         font-size: 0.85rem;
+        padding: 18px;
+    }
+    .container {
+        padding: 30px 16px;
+    }
+    .output {
+        margin-left: 14px;
     }
 }

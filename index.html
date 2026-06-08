@@ -3,162 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Artem | Homepage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="scanline"></div>
     
     <div class="container">
-        <div class="header">
-            <h1 class="title">Artem aka Faloon</h1>
+        <header class="header">
+            <h1 class="title" data-text="Artem aka Faloon"></h1>
             <p class="subtitle">R&D Engineer</p>
-            <p class="prompt">faloon@cachyos-x8664:~$ <span class="typing-cursor">_</span></p>
-        </div>
+            <p class="prompt">faloon@cachyos-x8664:~$ <span class="typing-cursor"></span></p>
+        </header>
 
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <div class="terminal-button"></div>
-                    <div class="terminal-button"></div>
-                    <div class="terminal-button"></div>
-                </div>
-                <div class="terminal-title">fish - about.sh</div>
-            </div>
-            <div class="terminal-content">
-                <div class="command-line">
-                    <span class="prompt-symbol">$</span>
-                    <span class="command">cat about.txt</span>
-                </div>
-                <div class="output">
-                    <div class="output-line">Начинающий разработчик, фокусируюсь на практических проектах.</div>
-                    <div class="output-line">Создаю Telegram-ботов, Discord-ботов и утилиты для автоматизации.</div>
-                    <div class="output-line">Интересуюсь кибербезопасностью, сетевыми технологиями и низкоуровневым программированием.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <div class="terminal-button"></div>
-                    <div class="terminal-button"></div>
-                    <div class="terminal-button"></div>
-                </div>
-                <div class="terminal-title">fish - skills.sh</div>
-            </div>
-            <div class="terminal-content">
-                <div class="command-line">
-                    <span class="prompt-symbol">$</span>
-                    <span class="command">ls -la /skills/</span>
-                </div>
-                <div class="output">
-                    <div class="output-line"><span class="highlight">drwxr-xr-x</span> languages/</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Python</div>
-                    <div class="output-line" style="margin-left: 20px;">├── JavaScript</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Bash</div>
-                    <div class="output-line" style="margin-left: 20px;">└── C++</div>
-                    <div class="output-line"><span class="highlight">drwxr-xr-x</span> tools/</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Linux</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Docker</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Github</div>
-                    <div class="output-line" style="margin-left: 20px;">├── VPN</div>
-                    <div class="output-line" style="margin-left: 20px;">└── Git</div>
-                    <div class="output-line"><span class="highlight">drwxr-xr-x</span> interests/</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Cybersecurity</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Network protocols</div>
-                    <div class="output-line" style="margin-left: 20px;">├── Infrastructure & DevOps</div>
-                    <div class="output-line" style="margin-left: 20px;">└── Reverse engineering</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="terminal-window">
+        <main>
+            <section class="terminal-window">
                 <div class="terminal-header">
                     <div class="terminal-buttons">
                         <div class="terminal-button"></div>
                         <div class="terminal-button"></div>
                         <div class="terminal-button"></div>
                     </div>
-                    <div class="terminal-title">fish - projects.sh</div>
+                    <div class="terminal-title">fish - about.sh</div>
                 </div>
                 <div class="terminal-content">
                     <div class="command-line">
                         <span class="prompt-symbol">$</span>
-                        <span class="command">cat projects.log</span>
+                        <span class="command">cat about.txt</span>
                     </div>
                     <div class="output">
-                        <div class="output-line"><span class="highlight">[ACTIVE]</span> Telegram Bot</div>
-                        <div class="output-line"><span class="highlight">[ACTIVE]</span> Business VPN</div>
+                        <p class="output-line">Начинающий программист, фокусируюсь на практических проектах.</p>
+                        <p class="output-line">Создаю Telegram-ботов, утилит для автоматизации своей рутины и VPN-проекты.</p>
+                        <p class="output-line">Интересуюсь кибербезопасностью, сетевыми технологиями и низкоуровневым программированием.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="terminal-window">
+            <section class="terminal-window">
                 <div class="terminal-header">
                     <div class="terminal-buttons">
                         <div class="terminal-button"></div>
                         <div class="terminal-button"></div>
                         <div class="terminal-button"></div>
                     </div>
-                    <div class="terminal-title">fish - contact.sh</div>
+                    <div class="terminal-title">fish - skills.sh</div>
                 </div>
                 <div class="terminal-content">
                     <div class="command-line">
                         <span class="prompt-symbol">$</span>
-                        <span class="command">./get_contacts.sh</span>
+                        <span class="command">ls -la /skills/</span>
                     </div>
                     <div class="output">
-                        <div class="link-item">
-                            <span class="link-icon">💚</span>
-                            <span>Telegram: <span class="highlight">@tryb0t</span></span>
-                        </div>
-                        <div class="link-item">
-                            <span class="link-icon">💚</span>
-                            <span>NodeAccess: <span class="highlight">https://t.me/NodeAccessVPN</span></span>
-                        </div>
-                        <div class="link-item">
-                            <span class="link-icon">💚</span>
-                            <span>Discord: <span class="highlight">.faloon</span></span>
-                        </div>
+<pre class="output-tree">
+<span class="highlight">drwxr-xr-x</span> languages/
+    ├── Python
+    ├── JavaScript
+    ├── Bash
+    └── C++
+<span class="highlight">drwxr-xr-x</span> tools/
+    ├── Linux
+    ├── Docker
+    ├── Github
+    ├── VPN
+    └── Git
+<span class="highlight">drwxr-xr-x</span> interests/
+    ├── Cybersecurity
+    ├── Network protocols
+    ├── Infrastructure & DevOps
+    └── Reverse engineering</pre>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <div class="footer">
-            <p>$ uptime</p>
-            <p>powered by curiosity & caffeine</p>
-        </div>
+            <div class="grid">
+                <section class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button"></div>
+                            <div class="terminal-button"></div>
+                            <div class="terminal-button"></div>
+                        </div>
+                        <div class="terminal-title">fish - projects.sh</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="command-line">
+                            <span class="prompt-symbol">$</span>
+                            <span class="command">cat projects.log</span>
+                        </div>
+                        <div class="output">
+                            <p class="output-line"><span class="highlight">[ACTIVE]</span> Telegram Bot</p>
+                            <p class="output-line"><span class="highlight">[ACTIVE]</span> Business VPN</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button"></div>
+                            <div class="terminal-button"></div>
+                            <div class="terminal-button"></div>
+                        </div>
+                        <div class="terminal-title">fish - contact.sh</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="command-line">
+                            <span class="prompt-symbol">$</span>
+                            <span class="command">./get_contacts.sh</span>
+                        </div>
+                        <div class="output">
+                            <a href="https://t.me/tryb0t" target="_blank" class="link-item">
+                                <span class="link-icon">--&gt;</span>
+                                <span>Telegram: <span class="highlight">@tryb0t</span></span>
+                            </a>
+                            <a href="https://t.me/NodeAccessVPN" target="_blank" class="link-item">
+                                <span class="link-icon">--&gt;</span>
+                                <span>Email: <span class="highlight">faloonai@proton.me</span></span>
+                            </a>
+                            <div class="link-item">
+                                <span class="link-icon">--&gt;</span>
+                                <span>Discord: <span class="highlight">.faloon</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>$ uptime -p</p>
+            <p id="uptime-field">up 1 minute</p>
+        </footer>
     </div>
 
     <script>
-        // Эффект печатающегося текста для заголовка
-        const title = document.querySelector('.title');
-        const text = title.textContent;
-        title.textContent = '';
-        let i = 0;
+        // Эффект плавного последовательного вывода текста (Typewriter)
+        const titleEl = document.querySelector('.title');
+        const originalText = titleEl.getAttribute('data-text');
+        let index = 0;
         
         function typeWriter() {
-            if (i < text.length) {
-                title.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 150);
+            if (index < originalText.length) {
+                titleEl.textContent += originalText.charAt(index);
+                index++;
+                setTimeout(typeWriter, 120);
             }
         }
-        
-        setTimeout(typeWriter, 500);
+        setTimeout(typeWriter, 400);
 
-        // Случайные мигания текста (glitch эффект)
+        // Скрипт реального аптайма страницы
+        const uptimeField = document.getElementById('uptime-field');
+        const startTime = Date.now();
+
         setInterval(() => {
-            const elements = document.querySelectorAll('.highlight');
-            const random = elements[Math.floor(Math.random() * elements.length)];
-            if (random) {
-                random.style.opacity = '0.5';
-                setTimeout(() => random.style.opacity = '1', 50);
+            const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+            if (elapsedSeconds < 60) {
+                uptimeField.textContent = `up ${elapsedSeconds} seconds`;
+            } else {
+                const minutes = Math.floor(elapsedSeconds / 60);
+                const seconds = elapsedSeconds % 60;
+                uptimeField.textContent = `up ${minutes}m, ${seconds}s`;
             }
-        }, 2000);
+        }, 1000);
     </script>
 </body>
 </html>
